@@ -6,6 +6,8 @@ testMockup = function( mockupUrl, testName, expected, callback ) {
 	}
 	
 	QUnit.test( testName, expected, function() {
+		QUnit.stop();
+		
 		$.ajax({
 			url: mockupUrl,
 			dataType: "html",
